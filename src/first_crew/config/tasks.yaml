@@ -1,0 +1,33 @@
+
+search_flights_task:
+  description: >
+    Search for available flights going to {destination} on {date}.
+    Provide a list of options with details including airline, departure and arrival times, duration, layovers, and price.
+  expected_output: >
+    A list of available flights formatted as markdown table with columns: Airline, Departure Time, Arrival Time, Duration, Layovers, Price.
+  agent: flight_search_agent
+
+search_hotels_task:
+  description: >
+    Search for available hotels in {location} from {check_in_date} to {check_out_date}.
+    Provide a list of options with details including hotel name, location, amenities, ratings, and price per night.
+  
+  expected_output: >
+    A list of available hotels formatted as markdown table with columns: Hotel Name, Location, Amenities, Ratings, Price per Night.
+  agent: hotel_search_agent
+
+plan_tour_task:
+  description: >
+    Create a detailed tourism tour itinerary for {destination} including key attractions, activities, and dining options.
+  
+  expected_output: >
+    A day-by-day itinerary formatted as markdown with sections for each day including activities, attractions, and dining options.
+  agent: tourism_tour_agent
+
+provide_advice_task:
+  description: >
+    Offer comprehensive travel advice for a trip to {destination} including safety tips, cultural norms, and essential packing items.
+  
+  expected_output: >
+    A detailed travel advice guide formatted as markdown with sections for safety tips, cultural norms, and packing recommendations.
+  agent: advisor_agent
